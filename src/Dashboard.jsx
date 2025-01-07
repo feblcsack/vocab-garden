@@ -11,10 +11,10 @@ import { FaUserCircle, FaSignOutAlt } from "react-icons/fa";
 
 const Header = ({ user, handleLogout }) => {
   return (
-    <div className="bg-gray-800 text-white flex justify-between items-center p-4 w-full">
+    <div className="bg-[#FFB103] text-white flex justify-between items-center p-4 w-full">
       {/* Left Section: Website Title */}
-      <div className="text-2xl font-semibold">
-        <span>My Vocabulary App</span>
+      <div className="">
+        <img src="/logo.png" alt="logo" />
       </div>
 
       {/* Right Section: User Profile and Logout */}

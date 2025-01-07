@@ -14,7 +14,7 @@ const XPBar = ({ xp }) => {
   };
 
   return (
-    <div className="bg-green-100 p-4 rounded shadow-md text-center">
+    <div className="bg-blue-100 p-4 rounded shadow-md text-center">
       <h2 className="text-lg font-bold mb-4">Tree Progress</h2>
       <img
         src={getTreeImage()}
@@ -23,7 +23,7 @@ const XPBar = ({ xp }) => {
       />
       <div className="w-full bg-gray-300 h-4 rounded relative overflow-hidden">
         <div
-          className="bg-green-500 h-4"
+          className="bg-blue-950 h-4"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
