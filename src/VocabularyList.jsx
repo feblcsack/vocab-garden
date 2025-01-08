@@ -4,7 +4,7 @@ const VocabularyList = ({ vocabList }) => {
   return (
     
     <div className="bg-white p-4 rounded-lg shadow-md mt-6">
-      <h2 className="text-2xl font-bold mb-4">Vocabulary List</h2>
+      <h2 className="text-2xl font-bold font-pixel mb-4">Vocabulary List</h2>
       <ul>
         {vocabList.map((vocab, index) => (
           <VocabularyItem key={index} vocab={vocab} />

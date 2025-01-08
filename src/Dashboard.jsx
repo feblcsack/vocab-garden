@@ -8,6 +8,7 @@ import XPBar from "./XPBar";
 import VocabularyList from "./VocabularyList";
 import Leaderboard from "./Leaderboard";
 import { FaUserCircle, FaSignOutAlt } from "react-icons/fa";
+import Hero from "./Hero";
 
 const Header = ({ user, handleLogout }) => {
   return (
@@ -96,6 +97,7 @@ const Dashboard = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen flex flex-col items-center bg-gray-50 ">
       {!user ? (
         <Login onLoginSuccess={setUser} />
@@ -103,6 +105,8 @@ const Dashboard = () => {
         <>
           {/* Header */}
           <Header user={user} handleLogout={handleLogout} />
+          <div className="w-full"><Hero/></div>
+          
 
           <div className="flex w-full max-w-4xl flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 mt-6">
             {/* Left Section: XP Bar & Add Vocabulary Form */}
@@ -125,12 +129,13 @@ const Dashboard = () => {
           </div>
 
           {/* Leaderboard Section */}
-          <div className="mt-6 w-full max-w-4xl">
+          {/* <div className="mt-6 w-full max-w-4xl">
             <Leaderboard />
-          </div>
+          </div> */}
         </>
       )}
     </div>
+    </>
   );
 };
 
