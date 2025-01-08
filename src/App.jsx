@@ -4,7 +4,8 @@ import Dashboard from "./Dashboard";
 const App = () => {
   return (
     <div>
-      <Dashboard />
+      <section id="dashboard"> <Dashboard /></section>
+     
     </div>
   );
 };

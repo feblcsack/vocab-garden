@@ -3,7 +3,7 @@ import { FaUserCircle, FaSignOutAlt } from "react-icons/fa";
 
 const Header = ({ user, handleLogout }) => {
   return (
-    <div className="bg-[#FFB103] text-white flex flex-wrap justify-between items-center p-4 w-full">
+    <div className="bg-[#FFB103] text-white flex flex-wrap shadow-slate-950 justify-between items-center p-4 w-full">
       {/* Left Section: Website Title */}
       <div>
         <img 

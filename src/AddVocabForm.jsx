@@ -103,7 +103,7 @@ const AddVocabForm = ({ user, updateXP, vocabList, setVocabList }) => {
         type="submit"
         disabled={isSubmitting}
         className={`w-full py-2 px-4 rounded-md text-white ${
-          isSubmitting ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
+          isSubmitting ? "bg-gray-400" : "bg-slate-800 hover:bg-slate-900"
         }`}
       >
         {isSubmitting ? "Adding..." : "Add Vocabulary"}
