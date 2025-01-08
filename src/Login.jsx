@@ -2,6 +2,7 @@ import React from "react";
 import { auth, provider } from "./firebase";
 import { signInWithPopup } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
+
 const Login = ({ onLoginSuccess }) => {
   const handleLogin = async () => {
     try {
@@ -19,19 +20,28 @@ const Login = ({ onLoginSuccess }) => {
 
   return (
     <div
-      className="flex justify-center items-center h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: "url('https://media.licdn.com/dms/image/v2/D5622AQG2XbH-gqlk4g/feedshare-shrink_800/feedshare-shrink_800/0/1720001694808?e=2147483647&v=beta&t=UMM7AnGoc_H3NdeDeKXMxyShvucUaFRClV_bGAzo4aE')", // Ganti URL ini dengan gambar background yang diinginkan
-      }}
+      className="flex justify-center items-center h-screen relative"
     >
-     <button
-  onClick={handleLogin}
-  className="bg-slate-800 text-white py-2 px-6 rounded-full hover:bg-slate-900 z-10 flex items-center justify-center space-x-2"
->
-  <span>Login with Google</span>
-  <FcGoogle className="text-xl" />
-</button>
+      {/* Background Image with Overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{
+          backgroundImage: `url(${window.innerWidth >= 768
+            ? "https://media.licdn.com/dms/image/v2/D5622AQG2XbH-gqlk4g/feedshare-shrink_800/feedshare-shrink_800/0/1720001694808?e=2147483647&v=beta&t=UMM7AnGoc_H3NdeDeKXMxyShvucUaFRClV_bGAzo4aE"
+            : "https://via.placeholder.com/1080x1920?text=Mobile+Background"})`,
+        }}
+      ></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
+      {/* Login Button */}
+      <button
+        onClick={handleLogin}
+        className="bg-slate-800 text-white py-2 px-6 rounded-full hover:bg-slate-900 z-10 flex items-center justify-center space-x-2 shadow-lg"
+      >
+        <span>Login with Google</span>
+        <FcGoogle className="text-xl" />
+      </button>
     </div>
   );
 };

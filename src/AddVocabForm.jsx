@@ -65,45 +65,51 @@ const AddVocabForm = ({ user, updateXP, vocabList, setVocabList }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white p-6 rounded-xl shadow-lg w-full max-w-lg mx-auto"
+      className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg mx-auto border border-gray-200"
     >
-      <h2 className="text-xl font-semibold mb-6">Add New Vocabulary</h2>
+      <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
+        Add New Vocabulary
+      </h2>
 
-      <div className="mb-4">
+      <div className="mb-5">
         <label className="block text-sm font-medium text-gray-700">Word</label>
         <input
           type="text"
           {...register("word")}
-          className={`mt-1 block w-full px-4 py-2 border rounded-md focus:ring-2 ${
-            errors.word ? "focus:ring-red-500" : "focus:ring-blue-500"
-          }`}
-          placeholder="Enter vocabulary word"
+          className={`mt-2 w-full px-4 py-3 text-gray-800 bg-gray-50 border ${
+            errors.word ? "border-red-500" : "border-gray-300"
+          } rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900`}
+          placeholder="Enter a word"
         />
         {errors.word && (
-          <p className="text-red-500 text-sm mt-1">{errors.word.message}</p>
+          <p className="text-red-500 text-xs mt-2">{errors.word.message}</p>
         )}
       </div>
 
-      <div className="mb-6">
-        <label className="block text-sm font-medium text-gray-700">Definition</label>
+      <div className="mb-5">
+        <label className="block text-sm font-medium text-gray-700">
+          Definition
+        </label>
         <textarea
           {...register("definition")}
-          className={`mt-1 block w-full px-4 py-2 border rounded-md focus:ring-2 ${
-            errors.definition ? "focus:ring-red-500" : "focus:ring-blue-500"
-          }`}
+          className={`mt-2 w-full px-4 py-3 text-gray-800 bg-gray-50 border ${
+            errors.definition ? "border-red-500" : "border-gray-300"
+          } rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900`}
           rows="4"
-          placeholder="Enter definition"
+          placeholder="Enter a definition"
         />
         {errors.definition && (
-          <p className="text-red-500 text-sm mt-1">{errors.definition.message}</p>
+          <p className="text-red-500 text-xs mt-2">{errors.definition.message}</p>
         )}
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full py-2 px-4 rounded-md text-white ${
-          isSubmitting ? "bg-gray-400" : "bg-slate-800 hover:bg-slate-900"
+        className={`w-full py-3 rounded-md text-white text-sm font-medium ${
+          isSubmitting
+            ? "bg-gray-400 cursor-not-allowed"
+            : "bg-slate-800 hover:bg-slate-700"
         }`}
       >
         {isSubmitting ? "Adding..." : "Add Vocabulary"}

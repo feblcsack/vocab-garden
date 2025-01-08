@@ -14,7 +14,7 @@ const XPBar = ({ xp }) => {
   };
 
   return (
-    <div className="bg-blue-100 font-custom p-4 rounded shadow-md text-center">
+    <div className="bg-yellow-100 font-custom p-4 rounded shadow-md text-center">
       <h2 className="text-lg font-bold mb-4">Tree Progress</h2>
       <img
         src={getTreeImage()}
