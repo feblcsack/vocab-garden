@@ -65,19 +65,19 @@ const AddVocabForm = ({ user, updateXP, vocabList, setVocabList }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg mx-auto border border-gray-200"
+      className="bg-[#09090B] p-6 rounded-lg shadow-md w-full max-w-lg mx-auto border border-gray-700"
     >
-      <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
+      <h2 className="  font-pixel mb-6 text-white text-center">
         Add New Vocabulary
       </h2>
 
       <div className="mb-5">
-        <label className="block text-sm font-medium text-gray-700">Word</label>
+        <label className="block text-sm font-medium text-white">Word</label>
         <input
           type="text"
           {...register("word")}
-          className={`mt-2 w-full px-4 py-3 text-gray-800 bg-gray-50 border ${
-            errors.word ? "border-red-500" : "border-gray-300"
+          className={`mt-2 w-full px-4 py-3 text-white bg-[#09090B] border ${
+            errors.word ? "border-red-500" : "border-gray-700"
           } rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900`}
           placeholder="Enter a word"
         />
@@ -87,13 +87,13 @@ const AddVocabForm = ({ user, updateXP, vocabList, setVocabList }) => {
       </div>
 
       <div className="mb-5">
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-white">
           Definition
         </label>
         <textarea
           {...register("definition")}
-          className={`mt-2 w-full px-4 py-3 text-gray-800 bg-gray-50 border ${
-            errors.definition ? "border-red-500" : "border-gray-300"
+          className={`mt-2 w-full px-4 py-3 text-white bg-[#09090B] border ${
+            errors.definition ? "border-red-500" : "border-gray-700"
           } rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900`}
           rows="4"
           placeholder="Enter a definition"

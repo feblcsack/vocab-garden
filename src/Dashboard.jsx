@@ -98,7 +98,7 @@ const Dashboard = () => {
 
   return (
     <>
-    <div className="min-h-screen flex flex-col items-center bg-gray-50 ">
+    <div className="min-h-screen flex flex-col items-center bg-[#000000] ">
       {!user ? (
         <Login onLoginSuccess={setUser} />
       ) : (
@@ -112,7 +112,7 @@ const Dashboard = () => {
             {/* Left Section: XP Bar & Add Vocabulary Form */}
             <div className="w-full md:w-1/3 space-y-6">
               <XPBar xp={xp} />
-              <div className="bg-white shadow-md rounded-lg p-6">
+              <div className="bg-[#09090B] outline outline-gray-700 outline-1 shadow-md rounded-lg p-6">
                 <AddVocabForm
                   user={user}
                   updateXP={updateXP}
