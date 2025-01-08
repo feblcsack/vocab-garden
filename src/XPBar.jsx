@@ -1,7 +1,7 @@
 import React from "react";
-import tree1 from "./assets/labulip.png";
-import tree2 from "./assets/labupan.png";
-import tree3 from "./assets/labupoo.png";
+import tree1 from "./assets/bulba1.png";
+import tree2 from "./assets/bulba2.png";
+import tree3 from "./assets/bulba.png";
 
 const XPBar = ({ xp }) => {
   const level = Math.floor(xp / 100); 
@@ -23,7 +23,7 @@ const XPBar = ({ xp }) => {
       />
       <div className="w-full bg-gray-300 h-4 rounded relative overflow-hidden">
         <div
-          className="bg-blue-950 h-4"
+          className="bg-blue-950 rounded-lg h-3"
           style={{ width: `${progress}%` }}
         ></div>
       </div>

@@ -4,7 +4,7 @@ const VocabularyList = ({ vocabList }) => {
   return (
     
     <div className="bg-white p-4 rounded-lg shadow-md mt-6">
-      <h2 className="text-lg font-bold mb-4">Vocabulary List</h2>
+      <h2 className="text-2xl font-bold mb-4">Vocabulary List</h2>
       <ul>
         {vocabList.map((vocab, index) => (
           <VocabularyItem key={index} vocab={vocab} />
@@ -21,9 +21,9 @@ const VocabularyItem = ({ vocab }) => {
 
   return (
     <li className="mb-4">
-      <h3 className="font-semibold">{vocab.word}</h3>
+      <h3 className="font-bold text-lg">{vocab.word}</h3>
       <p className="text-sm text-gray-600">
-        {expanded ? vocab.definition : `${vocab.definition.slice(0, 100)}...`}
+        {vocab.definition}
       </p>
       {vocab.definition.length > 100 && (
         <button

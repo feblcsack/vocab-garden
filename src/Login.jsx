@@ -1,7 +1,7 @@
 import React from "react";
 import { auth, provider } from "./firebase";
 import { signInWithPopup } from "firebase/auth";
-
+import { FcGoogle } from "react-icons/fc";
 const Login = ({ onLoginSuccess }) => {
   const handleLogin = async () => {
     try {
@@ -24,12 +24,14 @@ const Login = ({ onLoginSuccess }) => {
         backgroundImage: "url('https://media.licdn.com/dms/image/v2/D5622AQG2XbH-gqlk4g/feedshare-shrink_800/feedshare-shrink_800/0/1720001694808?e=2147483647&v=beta&t=UMM7AnGoc_H3NdeDeKXMxyShvucUaFRClV_bGAzo4aE')", // Ganti URL ini dengan gambar background yang diinginkan
       }}
     >
-      <button
-        onClick={handleLogin}
-        className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700 z-10"
-      >
-        Login with Google
-      </button>
+     <button
+  onClick={handleLogin}
+  className="bg-slate-800 text-white py-2 px-6 rounded-full hover:bg-slate-900 z-10 flex items-center justify-center space-x-2"
+>
+  <span>Login with Google</span>
+  <FcGoogle className="text-xl" />
+</button>
+
     </div>
   );
 };
